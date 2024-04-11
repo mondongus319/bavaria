@@ -17,3 +17,15 @@ CREATE TABLE recibo (
     FOREIGN KEY (gmail) REFERENCES vendedor(gmail)
 );
 
+
+-- Tabla para almacenar información de los productos
+CREATE TABLE productos (
+    id_producto INT PRIMARY KEY NOT NULL,
+    nombre_producto VARCHAR(50) NOT NULL
+);
+
+-- Tabla para almacenar información de los departamentos
+CREATE TABLE departamento (
+    id_d INT PRIMARY KEY NOT NULL,
+    nombre_d VARCHAR(20) NOT NULL
+);

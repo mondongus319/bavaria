@@ -1,0 +1,19 @@
+-- Tabla para almacenar información de los vendedores
+CREATE TABLE vendedor (
+    gmail VARCHAR(50) PRIMARY KEY NOT NULL,
+    nombres VARCHAR(25) NOT NULL,
+    apellidos VARCHAR(25) NOT NULL,
+    clave VARCHAR(10) NOT NULL
+);
+
+-- Tabla para almacenar información de los recibos
+CREATE TABLE recibo (
+    id_recibo INT PRIMARY KEY NOT NULL,
+    gmail VARCHAR(50) NOT NULL,
+    direccion VARCHAR(30),
+    cedula_c VARCHAR(11),
+    nombre_c VARCHAR(25),
+    cantidad_p INT,
+    FOREIGN KEY (gmail) REFERENCES vendedor(gmail)
+);
+
